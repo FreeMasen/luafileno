@@ -28,3 +28,5 @@ jobs:
       - uses: leafo/gh-actions-luarocks@v4
       - name: install package
         run: luarocks make
+      - name: run test "it_works.lua"
+        run: lua ./tests/it_works.lua
