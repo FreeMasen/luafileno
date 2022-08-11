@@ -17,8 +17,8 @@ jobs:
           - "5.4"
         os:
           - ubuntu-latest
-          - windows-latest
           - macos-latest
+          # - windows-latest disabled until https://github.com/leafo/gh-actions-luarocks/pull/14 has been merged
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v3
