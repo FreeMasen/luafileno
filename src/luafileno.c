@@ -12,7 +12,7 @@ static const struct luaL_Reg luafileno_lib[] = {
 
 LUALIB_API int luaopen_luafileno_core(lua_State *L)
 {
-    luaL_newlib(L, luafileno_lib);
-    lua_pushvalue(L, -1);
+    lua_newtable(L);
+    luaL_setfuncs(L, luafileno_lib, 0);
     return 1;
 }
