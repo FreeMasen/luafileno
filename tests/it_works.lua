@@ -5,7 +5,7 @@ local file_openers = {
     io.output,
     io.tmpfile,
     function()
-        return io.open("luafileno.lua")
+        return io.open("tests/it_works.lua")
     end
 }
 local function greater_than_two(name)
@@ -25,11 +25,11 @@ local file_validators = {
         print("stdout was valid!")
     end,
     greater_than_two("tmp"),
-    greater_than_two("luafileno.lua"),
+    greater_than_two("tests/it_works.lua"),
 }
 
 for i, opener in ipairs(file_openers) do
-    local f = opener()
+    local f = assert(opener())
     local no = fileno(f)
     file_validators[i](no)
 end

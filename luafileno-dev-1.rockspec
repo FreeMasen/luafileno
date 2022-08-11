@@ -15,7 +15,6 @@ This project exposes the stdio C function `luafileno` to convert a `*FILE` into 
 build = {
    type = "builtin",
    modules = {
-      ["luafileno.core"] = "src/luafileno.c",
-      luafileno = "luafileno.lua",
+      luafileno = "src/luafileno.c",
    }
 }
