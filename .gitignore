@@ -1,0 +1,8 @@
+/luarocks
+/lua
+/lua_modules
+/.luarocks
+/luafileno
+**/*.o
+**/*.so
+**/*.log
